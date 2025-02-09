@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f8e1e1; /* Fondo suave de San Valentín */
+}
+
+.hidden {
+    display: none;
+}
+
+#animation {
+    position: relative;
+    margin-top: 20px;
+}
+
+.elephant {
+    font-size: 60px;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: elephantSlide 2s forwards;
+}
+
+.balloon {
+    font-size: 40px;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: balloonFloat 2s forwards;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4d6d; /* Botones con un color de San Valentín */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff1e4f; /* Efecto hover para los botones */
+}
+
+@keyframes elephantSlide {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes balloonFloat {
+    0% {
+        bottom: -80px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 100px;
+        opacity: 1;
+    }
+}
